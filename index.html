@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="container">
-        <div id="btn">
-            <button class="variable-btn">minuscole</button>
-            <button class="variable-btn">maiuscole</button>
-            <button class="variable-btn">numeri</button>
-            <button class="variable-btn">simboli</button>
-            <button onclick="generatePassword()" id="generate">genera</button>
-        </div>
-        <input id="display" readonly>
-    </div>
-        
 
-    <script src="main.js"></script>
+<body>
+    <div id="generator">
+        <p class="title">Password Generator<br><span>By Flam3yx</span></p>
+        <input id="display" readonly>
+        <button id="refresh" onclick="generatePassword()">
+            <img src="refresh.svg" alt="refresh">
+        </button>
+        <button id="copy" onclick=copy()">
+            <img src="copy.svg" alt="copy">
+        </button>
+    </div>
+    <div id="personalize">
+        <div id="btn">
+            <div class="options">
+                <input type="checkbox" name="1" class="checkbox" id="lowercase" checked>
+                <label for="1">Lower Case</label>
+            </div>
+            <div class="options">
+                <input type="checkbox" name="2" class="checkbox" id="uppercase" checked>
+                <label for="2">Upper Case</label>
+            </div>
+            <div class="options">
+                <input type="checkbox" name="3" class="checkbox" id="numbers" checked>
+                <label for="3">Numbers</label>
+            </div>
+            <div class="options">
+                <input type="checkbox" name="4" class="checkbox" id="symbols" checked>
+                <label for="4">Symbols</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
